@@ -1,0 +1,897 @@
+/*start main rules*/*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Poppins',sans-serif;}:root{--main-color:#fff;}th{text-align:center!important;}/*end main rules*//*start index style page*/body{background-color: whitesmoke!important;}section{display: flex!important;justify-content: center;align-items: center;min-height: 100vh;background: linear-gradient(-30deg,#03a9f4 0%,#3a78b7 50%,#262626 50%,#607d8b 100%);filter: hue-rotate(120deg);animation: animate 10s linear infinite;}@keyframes animate{0%{filter: hue-rotate(0deg);}100%{filter: hue-rotate(360deg);}}.box{position: relative;padding: 50px;width: 360px;height: 70vh;display: flex;justify-content: center;align-items: center;background: rgba(255,255,255,0.1);border-radius: 6px;box-shadow: 0 5px 35px rgba(0,0,0,0.2);}.box::after{content:'';position: absolute;top:5px;left: 5px;right: 5px;bottom: 5px;border-radius: 5px;pointer-events: none;background: linear-gradient(to bottom,rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 15%,transparent 50%,transparent 85%,rgba(255,255,255,0.3) 100%);}section .box .form{position: relative;width: 100%;}section .box .form h2{color: var(--main-color,#fff);font-weight: 600;letter-spacing: 2px;margin-bottom: 30px;}section .box .form .inputbox{position: relative;width: 100%;margin-bottom: 20px;display: flex;position: relative;}section .box .form .inputbox input{width: 100%;outline: none;border: 2px solid rgba(255,255,255,0.3);background: transparent;padding: 8px 10px;border-radius: 6px;color: var(--main-color,#fff);box-shadow: inset 0 0 25px rgb(0,0,0,0.2);font-size: 16px;font-weight: 300;padding-left: 35px;}section .box .form .inputbox input::placeholder{color: var(--main-color,#fff);}section .box .form .inputbox .font-icon{position: absolute;top: 0.5vh;left: 0.6vw;font-size: x-large!important;width: 8%;color: var(--main-color,#fff);}section .box .form .inputbox input[type="submit"]{background: var(--main-color,#fff);color: #111;max-width: 100px;padding: 8px 10px;box-shadow: none;font-weight: 500;letter-spacing: 1px;cursor: pointer;display: flex;justify-content: center;align-items: center;}section .box .form .submit_container{display: flex;justify-content: space-between;align-content: baseline;}section .box .form .submit_container .classlangbtn{background: var(--main-color,#fff);color: #111;max-width: 100px;padding: 8px 10px;box-shadow: none;font-weight: 500;letter-spacing: 1px;cursor: pointer;display:flex;justify-content: center;align-items: center;text-decoration: none;border-radius: 6px;height: 38px}section .box .form .submit_container :nth-child(2){	display: block;}.remember{position: relative;display: inline-block;color: var(--main-color,#fff);font-weight: 300;margin-bottom: 10px;cursor: pointer;}section .box .form p{color: var(--main-color,#fff);font-weight: 300;font-size: 15px;margin-top: 10px;}section .box .form p a{color: var(--main-color,#fff);}.astrix_right{align-self: center;position: absolute;right: 241px;top: 2px;color: #5389d4;font-size: 36px;}	.astrix_left{align-self: center;position: absolute;right: 5px;top: 2px;color: #5389d4;font-size: 36px;}/*end index style page*//*start dashboard style page*//*start sidebar*/.body_dashboard{overflow: hidden}.container_dashboard{position: relative;width: 100%;}.sidebar{position: fixed;width: 300px;background: #003147;height: 141vh;transition: 0.5s;overflow: hidden;}.sidebar.active{width: 300px;left: 0;}.sidebar ul{position: absolute;top: 0;left: 0;width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;}.sidebar ul li{position: relative;width: 100%;list-style: none;}.sidebar ul li:first-child a{display: flex;align-items: baseline;}.sidebar ul li a{text-decoration: none;color: var(--main-color,#fff);position: relative;display: flex;width: 100%;align-items: center;}.li_1_convert_right_way_link_to_arabic{align-items: flex-start;}.sidebar ul li:nth-child(1) a .title h2{font-size: large;}.sidebar ul li:not(:nth-child(1)):hover{background: whitesmoke;}.sidebar ul li:not(:nth-child(1)):hover a{background: whitesmoke;}.sidebar ul li a .icon{position: relative;display: block;min-width: 60px;height: 60px;line-height: 61px;text-align: center;}.sidebar ul li a .icon .fa{color: var(--main-color,#fff);font-size: 24px;}.sidebar ul li:not(:nth-child(1)):hover .icon .fa{color: #03a9f4;}.sidebar ul li a .title{text-align: center;position: relative;display: block;padding: 0 10px;line-height: 52px;height: 59px;white-space: nowrap;}.sidebar ul li:not(:nth-child(1)):hover .title{color: #03a9f4;}.sidebar ul li b:nth-child(1){display:none;position: absolute;top: -20px;height: 20px;width: 100%;background: #f5f5f5;}.sidebar ul li b:nth-child(1):before{content:'';position:absolute;top:0;left:0;width: 100%;height: 100%;background: #003147;border-bottom-right-radius: 20px;}.sidebar ul li b:nth-child(2){display:none;position: absolute;bottom: -20px;height: 20px;width: 100%;background: #f5f5f5;}.sidebar ul li b:nth-child(2):before{content:'';position:absolute;top:0;left:0;width: 100%;height: 100%;background: #003147;border-top-right-radius: 20px;}.sidebar ul li:not(:nth-child(1)):hover b:nth-child(1),.sidebar ul li:not(:nth-child(1)):hover b:nth-child(2){display:block}.sidebar ul li.clicked,.sidebar ul li.clicked a.clicked{background: whitesmoke;}.sidebar ul li.clicked a.clicked i.clicked-1_i,.sidebar ul li.clicked a.clicked .title.clicked-1_title,.sidebar ul li.clicked a.clicked i.clicked-2_i,.sidebar ul li.clicked a.clicked .title.clicked-2_title,.sidebar ul li.clicked a.clicked i.clicked-3_i,.sidebar ul li.clicked a.clicked .title.clicked-3_title,.sidebar ul li.clicked a.clicked i.clicked-4_i,.sidebar ul li.clicked a.clicked .title.clicked-4_title,.sidebar ul li.clicked a.clicked i.clicked-5_i,.sidebar ul li.clicked a.clicked .title.clicked-5_title,.sidebar ul li.clicked a.clicked i.clicked-6_i,.sidebar ul li.clicked a.clicked .title.clicked-6_title,.sidebar ul li.clicked a.clicked i.clicked-7_i,.sidebar ul li.clicked a.clicked .title.clicked-7_title,.sidebar ul li.clicked a.clicked i.clicked-8_i,.sidebar ul li.clicked a.clicked .title.clicked-8_title,.sidebar ul li.clicked a.clicked i.clicked-9_i,.sidebar ul li.clicked a.clicked .title.clicked-9_title,.sidebar ul li.clicked a.clicked i.clicked-10_i,.sidebar ul li.clicked a.clicked .title.clicked-10_title{color: #03a9f4!important;}@media print{.sidebar{display:none;}}/*end sidebar*//*start main page (manage_all))in dashboard page*/.main{position: absolute;width: calc(100% - 300px);left: 300px;height: 220vh;background: #f5f5f5;transform: 0.5s;transition: 0.5s;}.main.active{width: calc(100% - 60px);left: 60px;transform: 0.5s;height: 100%;}.main .topbar{width: 100%;background: var(--main-color,#fff);height: 75px;display: flex;justify-content: space-between;align-items: center;position: relative;left: 1.5vw;width: 97%;position: relative;left: 2%;}.main .topbar.active{width: 95.5%;left: 3%;}.toggle{position: relative;height: 27px;cursor: pointer;display: flex;flex-direction: column;right: -1vw;justify-content: center;}.toggle .span_toggle{width:100%;align-self: flex-end;transition: 0.5s;}.toggle .span_toggle.active{width: 60%;}.toggle span{background: rgb(0, 0, 0);margin: 0 0 6px;width: 25px;height: 4px;}.user{display: flex;flex-direction: row;align-items: center;justify-content: flex-end;width: 20vw;}.user span img{position: relative;right: 1vw;}.flag_title{display: flex;flex-direction: column;width: 197px;align-items: center;white-space: nowrap;}.flag_title span {font-size: 1.3vw;}@media (max-width:823px){.user{right:0vw!important;}}
+/*start table in dashboard page*/
+.details{
+    position: relative;
+    width: 101.3%;
+    padding: 0 20px 20px;
+    top: 1.5%;
+}
+.details.active{width: 100%;}
+.details .emplyees_mangement{position: relative;min-height: 388px;background: var(--main-color,#fff);padding: 20px;}
+.details .emplyees_mangement .fixed_table_responsive
+{
+	height:46vh;
+}
+.details .emplyees_mangement table{width: 100%;border-collapse: collapse;margin-top: 5vw;}
+.details .emplyees_mangement table tr{border-bottom: 1px solid rgba(0,0,0,0.1);}
+.details .emplyees_mangement table tbody tr:last-child{border-bottom:none}
+.details .emplyees_mangement table tbody tr:hover{background: #03a9f4;color: var(--main-color,#fff);}
+.details .emplyees_mangement table thead tr td{
+    font-weight: 600;
+    text-align: center;
+}
+.details .emplyees_mangement table tr td{
+   padding:9px 5px;
+   text-align: center;
+   vertical-align: baseline;
+   font-size: 1.2vw;
+}
+.details .emplyees_mangement table tbody tr td:last-child,
+.details .emplyees_mangement table thead tr td:last-child
+{text-align: center;}
+.details .emplyees_mangement table tbody tr td:nth-child(2),
+.details .emplyees_mangement table thead tr td:nth-child(2)
+{text-align: center;padding-right:20px;}
+.details .emplyees_mangement table tbody tr td:nth-child(3),
+.details .emplyees_mangement table thead tr td:nth-child(3)
+{text-align:center;}
+.ul_btns{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.ul_btns li
+{
+	margin-right: 1vw;
+}
+
+.ul_btns li a{text-decoration: none;}
+.card_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.card_header h2{
+    font-weight: 600;
+}
+.card_header .btn{
+    position: relative;
+    padding: 5px 10px;
+    background: #03a9f4;
+    color: var(--main-color,#fff);
+    text-decoration: none;
+    border-radius: 6px;
+}
+/*end table in dashboard page*/
+/* start media query for responsive design*/
+@media(max-width:700px)
+{
+ .sidebar{left: -300px;}
+ .sidebar.active{left: 0;overflow: hidden;}
+ .main{width: 100%;left: 0;height: 109%;}
+ .main.active {height: 150%;}
+ .toggle .span_toggle{width:60%}
+ .toggle .span_toggle.active{width:100%}
+ .user{width: 33vw;position: relative;}
+ .user .egypt_logo_container{position: relative;left: -4vw;}
+ .user span img {width: 143%;height: 100%;}
+ .flag_title{width: 245px;flex-wrap: nowrap;position: relative;right: 3vw;}
+ .flag_title span{font-size: 2vw;}
+}
+@media print
+ {
+	.user
+	{
+		position:relative!important;
+		left:50px!important;
+	}		
+ }
+@media(max-width:574){.cardBox.active{grid-template-columns: repeat(3,minmax(50px , 144px));}}
+@media(min-width:701px) and (max-width:760px){
+ .main{width: 100%;left: 0;}
+ .main.active{width: calc(100% - 300px);left: 300px;}
+    .toggle .span_toggle{width:60%;}
+    .toggle .span_toggle.active{width:100%}
+   .search.active{
+    position: relative;
+    left: -2vw;
+    width: 20vw;
+}
+.user{width: 26vw;position: relative;right: 8vw;}
+    .user.active{right: 7vw;}
+ .user .egypt_logo_container{
+    position: relative;
+    left: 0vw;
+}
+.user .egypt_logo_container.active{
+    left: 2vw;
+    height: 100%;
+}
+ .user span img {
+    width: 100%;
+    height: 100%;
+}
+
+ .flag_title{
+    width: 185px;
+    flex-wrap: nowrap;
+    position: relative;
+    right: 0;
+}
+.flag_title.active{
+    left: -2vw;
+}
+ .flag_title span{
+    font-size: 1.6vw;
+}
+.flag_title span.active{
+    font-size: 1.5vw;
+    position: relative;
+    left: 3vw;
+}
+.cardBox{grid-template-columns: repeat(3,minmax(50px , 28vw));}
+.cardBox.active{grid-template-columns: repeat(3,minmax(50px , 195px));}
+.cardBox .card:first-child .iconBox{position: relative;right: -2vw;}
+.cardBox .card:nth-child(3) .iconBox{
+    position: relative;
+    left: 4vw;
+}
+.cardBox .card .iconBox i {
+    font-size: 4vw;
+    right: 5vw;
+    position: relative;
+}
+.cardBox .card .iconBox i.active{
+    font-size: 3vw;
+    position: relative;
+}
+.cardBox .card .cardName{
+    font-size: 2.9vw;
+}
+.cardBox .card:first-child .cardName.active{
+    font-size: 11px;
+    position: relative;
+    top: 0vh;
+}
+.cardBox .card .cardName.active{
+    font-size: 14px;
+}
+.cardBox .card:first-child .cardName{
+    font-size: 2.4vw;
+}
+.cardBox .card .numbers{
+    font-size: 3vw;
+}
+.cardBox .card .numbers.active{}
+.cardBox .card:first-child .numbers.active{}  
+}
+@media(min-width:761px) and (max-width:823px){.main{width: 100%;left: 60px;height: 141vh;}
+.main.active{width: calc(100% - 300px);left: 300px;}
+   .toggle .span_toggle{width:60%;}
+   .toggle .span_toggle.active{width:100%}.egypt_logo_container{}.egypt_logo_container.active{
+    width: 24%;
+}.search.active{
+    width: 28vw;
+}.flag_title{}.search{
+    width: 46vw;
+}.user{
+    position: relative;
+    right: 11vw;
+    display: flex;
+    align-items: center;
+}.user.active{
+    right: 4vw;
+    width: 19vw;
+}.cardBox{grid-template-columns: repeat(3,minmax(50px , 221px));}.cardBox.active{}.cardBox .card:first-child .numbers.active{
+    font-size: 3vw;
+}
+.cardBox .card .numbers.active{
+    font-size: 3vw;
+}.cardBox .card:first-child .cardName.active{
+    font-size: 1.6vw;
+}.cardBox .card .cardName.active{}.cardBox .card:first-child .iconBox i.active{
+    position: relative;
+    right: 4vw;
+    font-size: 4vw;
+}.cardBox .card .iconBox i.active{
+    position: relative;
+    right: 5vw;
+    font-size: 4vw;
+}.cardBox .card:nth-child(3) .iconBox i.active{
+    font-size: 4vw;
+    right: 1vw;
+}
+}
+@media(min-width:824px)
+{
+.main{width: 92%;left: 60px;height: 220vh;}
+.main.active{width: calc(100% - 307px);left: 300px;}
+.toggle .span_toggle{width:60%;}
+.toggle .span_toggle.active{width:100%}
+.egypt_logo_container{
+}
+.egypt_logo_container.active{width: 24%
+}.search.active{width: 28vw}
+.flag_title{
+    width: auto;
+}.flag_title.active{}
+.search{width: 46vw;}
+.user{position: relative;right: 1vw;display: flex;align-items: center;}
+.user.active{right: 3vw;width: 19vw;}
+.cardBox{grid-template-columns: repeat(3,minmax(50px , 29vw));}.cardBox.active{}.cardBox .card:first-child .numbers.active{
+    font-size: 3vw;
+}
+.cardBox .card .numbers.active{
+    font-size: 3vw;
+}.cardBox .card:first-child .cardName.active{
+    font-size: 1.6vw;
+}.cardBox .card .cardName.active{}.cardBox .card:first-child .iconBox i.active{
+    position: relative;
+    right: 6vw;
+    font-size: 4vw;
+}.cardBox .card .iconBox i.active{
+    position: relative;
+    right: 5vw;
+    font-size: 4vw;
+}.cardBox .card:nth-child(3) .iconBox i.active{
+    font-size: 4vw;
+    right: 1vw;
+}}
+@media print
+{
+	.user .egypt_logo_container
+	{
+		left:2vw;
+		position:relative;
+	}
+	.flag_title
+	{
+		right:2vw;
+		position:relative;
+	}
+}
+/* end media query for responsive design*/
+/*end main page in dashboard page*/
+/*start Edit_Employees in dashboard*/
+.add_employees_container,.edit_employees_container{
+    display: flex;
+    align-items: center;
+    min-height: 89vh;
+    background: var(--main-color,#fff);
+    padding: 20px;
+    position: relative;
+    flex-direction: column;
+    left: 1.5vw;
+    width: 97.5%;
+    top: 1vw;
+}
+.add_edit_container
+{
+	width: 94%!important;
+}
+.add_form,.edit_form{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(50px , 26vw));
+    column-gap: 1vw;
+    grid-template-areas:
+        "project_name project_date number_of_version"
+        "manger_name instuite project_description"
+        "finished_job finished_job_date required_job"
+        "submit submit submit";
+    justify-items: end;
+    position: relative;
+    left: -1vw;
+}
+.add_project_form
+{
+	width: 70vw;
+}
+.add_form.active,.edit_form.active
+{
+	position: relative;
+	left: 74px;
+}
+.add_form .inputbox,.edit_form .inputbox{margin-bottom: 4vw;display: flex;align-content: space-around;align-items: flex-end;flex-direction: row-reverse;justify-content: space-between;width: 88vw!important;}
+.add_form .inputbox:nth-child(1), .edit_form .inputbox:nth-child(1){
+    grid-area: project_name;
+    width: fit-content;
+} 
+.add_form .inputbox:nth-child(1).active, .edit_form .inputbox:nth-child(1).active
+{
+	position: relative!important;
+    right: 42%!important;
+}
+.add_form .inputbox:nth-child(1).active_10, .edit_form .inputbox:nth-child(1).active_10
+{
+	    position: relative;
+	    right: 1%;
+}
+.add_form .inputbox:nth-child(2), .edit_form .inputbox:nth-child(2){
+    grid-area: project_date;
+    justify-self: center;
+}
+.add_form .inputbox:nth-child(2).active_8, .edit_form .inputbox:nth-child(2).active_8
+{
+	position: relative;
+    right: 26%;
+}
+.add_form .inputbox:nth-child(2).active_9, .edit_form .inputbox:nth-child(2).active_9
+{
+	position: relative;
+    right: 45%;
+}
+.add_form .inputbox:nth-child(2).active_10, .edit_form .inputbox:nth-child(2).active_10	
+{
+	    position: relative;
+	    right: 13%;
+}
+.add_form .inputbox:nth-child(3), .edit_form .inputbox:nth-child(3){
+    grid-area: number_of_version;
+    position: relative;
+    right: 8vw;
+}
+.add_form .inputbox:nth-child(3).active, .edit_form .inputbox:nth-child(3).active 
+{
+	    position: relative;
+	    right: 36%;
+}
+.add_form .inputbox,.edit_form .inputbox:nth-child(4)
+{
+    grid-area: manger_name;
+    position: relative;
+    right: 89px;
+    /* direction: rtl; */
+    align-self: center;
+}
+.add_form .inputbox:nth-child(4).active,.edit_form .inputbox:nth-child(4).active
+{
+	position: relative;
+    right: 52%;
+}
+.add_form .inputbox:nth-child(4).active_10,.edit_form .inputbox:nth-child(4).active_10
+{
+	    position: relative;
+    right: 31%!important;
+}
+.add_form .inputbox:nth-child(3) input, .edit_form .inputbox:nth-child(4) input
+{
+    width: fit-content!important;
+}
+.add_form .inputbox:nth-child(5) input, .edit_form .inputbox:nth-child(5){
+    grid-area: instuite;
+    position: relative;
+    right: 8vw;
+    display: flex;
+    flex-direction: column;
+} 
+.add_form .inputbox:nth-child(5).active, .edit_form .inputbox:nth-child(5).active
+{
+	position: relative;
+    right: 25%;
+}
+.add_form .inputbox:nth-child(5).active_9, .edit_form .inputbox:nth-child(5).active_9
+{
+	    position: relative;
+    right: 45%!important;
+}
+.add_form .inputbox:nth-child(5).active_10, .edit_form .inputbox:nth-child(5).active_10
+{
+	    position: relative;
+		right: 31%!important;
+}
+.add_form .inputbox:nth-child(6) input, .edit_form .inputbox:nth-child(6){
+    grid-area: project_description;
+    max-width: 354px;
+    max-height: 170px;
+    margin: 0px;
+    height: 258px;
+    width: 423px;
+    position: relative;
+    right: 8vw;
+    direction: rtl;
+}
+.add_form .inputbox:nth-child(6).active_9, .edit_form .inputbox:nth-child(6).active_9
+{
+	position: relative;
+    right: 42%;
+}
+.add_form .inputbox:nth-child(6).active_10, .edit_form .inputbox:nth-child(6).active_10
+{
+	position: relative;
+    right: 10%;
+}	
+.add_form .inputbox:nth-child(6) input i, .edit_form .inputbox:nth-child(6) i
+{position: relative;/* left: 7vw !important; */}
+.add_form .inputbox:nth-child(6) input i.active, .edit_form .inputbox:nth-child(6) i.active
+{
+	left: 4vw !important;
+}
+.add_form .inputbox:nth-child(6) input i.active_9, .edit_form .inputbox:nth-child(6) i.active_9
+{
+	position: relative;
+    left: 10vw !important;
+}
+.add_form .inputbox:nth-child(6) input i.active_10, .edit_form .inputbox:nth-child(6) i.active_10
+{
+	    position: relative;
+    left: 8vw !important;
+}
+.add_form .inputbox:nth-child(7) input, .edit_form .inputbox:nth-child(7){
+    grid-area: finished_job;
+    position: relative;
+    left: 9%;
+    direction: rtl;
+} 
+.add_form .inputbox:nth-child(7) input, .edit_form .inputbox:nth-child(7) textarea
+{resize: none;max-width: !important;max-height: 170px!important;margin: 0px;height: 122px!important;width: 284px!important;position: relative;right: 6vw;}
+}
+.add_form .inputbox:nth-child(7).active_9, .edit_form .inputbox:nth-child(7).active_9
+{
+	position: relative;
+    left: -3%!important;
+}
+.add_form .inputbox:nth-child(7).active_10, .edit_form .inputbox:nth-child(7).active_10
+{
+	position: relative;
+	left: 6%!important;
+}
+.add_form .inputbox:nth-child(7) input, .edit_form .inputbox:nth-child(7) select:nth-child(1){
+   position: relative;
+   right: 9%;
+}
+.add_form .inputbox:nth-child(7) input, .edit_form .inputbox:nth-child(7) select:nth-child(2){
+   position: relative;
+   right: 18%;
+}
+.add_form .inputbox:nth-child(7) input, .edit_form .inputbox:nth-child(7) select:nth-child(3){
+   position: relative;
+   right: 28%;
+}  
+.add_form .inputbox:nth-child(8), .edit_form .inputbox:nth-child(8){
+    grid-area: finished_job_date;
+    position: relative;
+    right: 9vw;
+}
+.add_form .inputbox:nth-child(8).active_9, .edit_form .inputbox:nth-child(8).active_9
+{
+    position: relative;
+    right: 14%!important;
+}
+.add_form .inputbox:nth-child(8).active_10 input, .edit_form .inputbox:nth-child(8).active_10
+{
+	position: relative!important;
+    right: 8%!important;
+}
+.add_form .inputbox:nth-child(9) input, .edit_form .inputbox:nth-child(9){
+    grid-area: required_job;
+    position: relative;
+    top: 1vh;
+    right: 4vw;
+    direction: rtl;
+}
+.add_form .inputbox:nth-child(9) input, .edit_form .inputbox:nth-child(9) textarea
+{
+	position: relative;
+	right: 4vw;
+}
+}
+.add_form .inputbox:nth-child(9).active_10, .edit_form .inputbox:nth-child(9).active_10
+{position: relative;right: 11%;display: flex;flex-wrap: wrap;justify-content: center;}
+.add_form .inputbox:nth-child(10) input, .edit_form .inputbox:nth-child(10){
+    grid-area: submit;
+    position: relative;
+    right: 43vw;
+    top: 4vw;
+}
+.add_form .inputbox select,.edit_form .inputbox select{
+    width: 20vw;
+    position: relative;
+    direction: rtl;
+}
+.add_form .inputbox select,.edit_form .inputbox:
+.add_form .inputbox input,.edit_form .inputbox input{
+    height: 5vh;
+    }
+   
+.add_form .inputbox:not(:last-child) input,.edit_form .inputbox:not(:last-child) input{padding-left: 54px;width: 27vw;}
+.add_form .inputbox:last-child input,.edit_form .inputbox:last-child input{
+    /* position: relative; */
+    /* left: -45vw; */
+    /* top: 13vh; */
+} 
+
+.add_form .inputbox:nth-child(8) input, .edit_form .inputbox:nth-child(8) input,
+.add_form .inputbox:nth-child(15) input, .edit_form .inputbox:nth-child(15) input,
+.add_form .inputbox:nth-child(16) input, .edit_form .inputbox:nth-child(16) input
+{
+    width:69%;
+}
+.add_form .inputbox:nth-child(18), .edit_form .inputbox:nth-child(18)
+{
+    position: relative;
+    left: 7vw;
+    }
+.add_form .inputbox i,.edit_form .inputbox i{
+    position: relative;
+    left: 4vw !important;
+}
+.add_form .inputbox:nth-child(6) i.fa-asterisk, .edit_form .inputbox:nth-child(6) i.fa-asterisk,
+.add_form .inputbox:nth-child(16) i.fa-asterisk, .edit_form .inputbox:nth-child(16) i.fa-asterisk
+{
+    left: 23.9vw!important;
+}
+.add_form .inputbox input[type="date"],.edit_form .inputbox input[type="date"]
+{width: 15vw;}
+.alert-danger.active{width: 97%!important;}
+.alert-warning.active{width: 97%!important;}
+.alert-info.active{width: 97%!important;}
+.add_form .inputbox:nth-child(10) input, .edit_form .inputbox:nth-child(10) .file_upload
+{
+	font-size: large;
+	background: none;
+	border: none;
+	width: 136px;
+	position: relative;
+	bottom: 179%;
+	left: 46%;
+}
+.file
+{
+	width: 65vw!important;
+	background-color: white!important;
+	border: none!important;
+}
+@media (max-width:575px)
+{
+	.manger_name
+	{
+		position: relative!important;
+		left: 13vw;
+	}
+	.instuite1,.instuite2,.instuite3
+	{
+		position: relative!important;
+		left: 9vw;
+	}
+	.project_description,.finished_job
+	{
+		position: relative!important;
+		left: 10vw;
+	}
+	.project_description,.finished_job
+	{
+		position: relative!important;
+		left: 0vw;
+	}
+	.file
+	{
+		right: 7vw;
+	}
+}
+@media (min-width:576px) and (max-width:767px)
+{
+	.manger_name
+	{
+		position: relative!important;
+		left: 19vw;
+	}
+	.instuite1,.instuite2,.instuite3
+	{
+		position: relative!important;
+		left: 11vw;
+	}
+	.project_description,.finished_job
+	{
+		position: relative!important;
+		left: 7vw;
+	}
+}
+@media (min-width:768px) and (max-width:991px)
+{
+	.manger_name
+	{
+		position: relative!important;
+		left: 22vw;
+	}
+	.instuite1,.instuite2,.instuite3
+	{
+		position: relative!important;
+		left: 20vw;
+	}
+	.project_description,.finished_job
+	{
+		position: relative!important;
+		left: 14vw;
+	}
+	.finished_job_date
+	{
+		position: relative!important;
+		left: 26vw;
+	}
+	.required_job
+	{
+		position: relative!important;
+		left: 19vw;
+	}
+}
+@media (max-width:767px)
+{
+	.finished_job_date
+	{
+		position: relative!important;
+		left: 13vw;
+	}
+	.required_job
+	{
+		position: relative!important;
+		left: -1vw;
+	}
+}
+@media (min-width:576px) and (max-width:767px)
+{
+	.project_description,.finished_job
+	{
+		position: relative!important;
+		left: 10vw;
+	}
+	.finished_job_date
+	{
+		position: relative!important;
+		left: 27vw;
+	}
+	.required_job
+	{
+		position: relative!important;
+		left: 10vw;
+	}
+}
+@media (min-width:992px) and (max-width:1199px)
+{
+	.number_of_version,.manger_name,.instuite3
+	{
+		position: relative!important;
+		left: 26vw;
+	}
+	.instuite1,.instuite2
+	{
+		position: relative!important;
+		left: 10vw;
+	}
+	.finished_job_date
+	{
+		position: relative!important;
+		left: 27vw;
+	}
+}
+@media (min-width:1200px) 
+{
+.manger_name
+	{
+		position: relative!important;
+		left: 24vw;
+	}
+	.instuite1,.instuite2,.instuite3
+	{
+		position: relative!important;
+		left: 16vw;
+	}
+	.instuite3
+	{
+		position: relative!important;
+		left: 27vw;
+	}
+	.project_description,.finished_job
+	{
+		position: relative!important;
+		left: 0vw;
+	}
+	.finished_job_date
+	{
+		position: relative!important;
+		left: 27vw;
+	}
+	.required_job
+	{
+		position: relative!important;
+		left: 22vw;
+	}
+}
+.height_fixed
+{
+	height: 89vh;
+	overflow-y: auto;
+}
+/*end Add_Employees in dashboard*/
+/* start add form project dashboard page*/
+.add_form_instuite_div
+{
+	right:10vw!important;
+	justify-content: space-around;
+}
+.add_form_manger_name_div
+{
+	top: 7vw;
+	left: 10vw;
+}
+.main.active .active_add_project
+{
+	   width: 61vw!important;
+	   left: 10vw!important;
+}
+.astrix_add_edit_project
+{
+	align-self: center;
+	position: absolute;
+	right: 2vw;
+	top: 0vh;
+	color: #bd2130;
+	font-size: 36px;
+}
+.astrix_add_edit_project_select
+{
+	align-self: center;
+	position: absolute;
+	right: 0vw;
+	top: 0vh;
+	color: #bd2130;
+	font-size: 36px;
+}
+.astrix_add_edit_project_textarea
+{
+	align-self: center;
+	position: absolute;
+	right: 2vw;
+	top: 0vh;
+	color: #bd2130;
+	font-size: 36px;
+}
+/* start print form_print */
+		.print_project_project_div
+		{
+			position: relative;
+			right: -36vw;
+			width: 88vw;
+			bottom: 4vh;
+		}
+		.print_submit
+		{
+			position: absolute;
+		}
+		.print_textarea
+		{
+			font-size:30px!important;
+		}
+		.print_project_project_submit
+		{
+			position: relative;
+			position: fixed;
+			right: 42vw;
+			bottom: 10vh;
+		}
+	@media print
+	{
+		.add_form .inputbox:nth-child(10) input, .edit_form .inputbox:nth-child(10)
+		{
+			display:none
+		}
+		.main
+		{
+		  width: 100vw!important;
+		  height: 200vh; 
+left:0!important;
+right:0!important;		  
+		}
+		.print_textarea
+		{
+			position:relative!important;
+			font-size:19.6px!important;
+			top:3vh;
+			width: 100vw!important;
+				
+		}
+		.print_submit
+		{
+			display:none!important;
+		}		
+		
+	}
+	
+/* end print form_print */
+/* end add form project dashboard page*/
+/* start manage user dashboard page */ 
+	.details .emplyees_mangement .fixed_table_responsive_user
+	{
+		height:46vh;
+	}
+	 .user_edit
+	 {
+	 	grid-template-areas:
+		 	"employee_name . user_name"
+		 	"project_name project_name project_name"
+		 	"password user_authority email"
+		 	"submit submit submit";
+	 	position: relative;
+	 	top: 4vw;
+	 }
+	 .user_edit_employee_name
+	 {
+	 	grid-area:employee_name!important;
+	 	width: 23vw!important;
+	 	justify-self: flex-start;
+	 }
+	 .user_edit_username
+	 {
+	 	grid-area:user_name!important;
+	 	width: 16vw;
+	 	align-items: center!important;
+	 	justify-self: flex-start!important;
+	 }
+	 .user_edit_email
+	 {
+	 	grid-area:email!important;
+	 	justify-self: center;
+	 	position: relative!important;
+	 	right: 5vw!important;
+	 }
+	 .user_edit_project_name
+	 {
+	 	grid-area:project_name!important;
+	 	right: 0!important;
+	 	justify-self: center;
+	 	margin-bottom: 0!important;
+	 }
+	 .user_edit_user_password
+	 {
+	 	grid-area:password!important;
+	 	max-height: 0!important;
+	 	height: 0!important;
+	 	direction: ltr!important;
+	 	max-width: 0!important;
+	 	flex-direction: row-reverse!important;
+	 	right: 4vw!important;
+	 }
+	 .user_edit_employee_name_submit
+	 {
+	 	grid-area:submit!important;
+	 	justify-self: center;
+	 	left: 0vw!important;
+	 	top: 8vh;
+	 }
+	 .user_edit_user_password_i
+	 {
+		 left=3vw!important;top:6px!important
+	 }
+	  .user_edit_user_password input
+	  {
+	  	width: 86vw;
+	  }
+	 .user_edit_email,.user_edit_user_password
+	 {
+	 	top:5vw;
+	 	align-items: flex-start!important;
+	 }
+	 .user_edit_user_authority
+	 {
+		 grid-area: user_authority!important;
+		 top: 5vw;
+		 align-items: flex-start!important;
+		 flex-direction: row-reverse!important;
+		 right: 3vw!important;
+		}
+		.user_container_finished
+		{
+			min-height: 10vh!important;
+		}
+/* end manage user dashboard page */ 
+/* add manage add_edit_user dashboard page */ 
+	.font_icon_add_edit_user
+	{
+		position: absolute;
+		top: 1.5vh;
+		left: 17.6vw;
+		font-size: x-large!important;
+		width: 8%;
+		/* color: var(--main-color,#fff); */
+	}
+/* end manage add_edit_user dashboard page */ 
+/*end  dashboard style page*/

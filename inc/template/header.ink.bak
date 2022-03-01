@@ -1,0 +1,24 @@
+<?php ob_start();?>
+<!DOCTYPE html>
+    <html>
+        <!--أعوذ بالله من الشيطان الرجيم-->
+        <!--بسم الله الرحمن الرحيم-->
+        <!--الحمد لله رب العالمين-->
+        <!--الرحمن الرحيم-->
+        <!--مالك يوم الدين-->
+        <!--إياك نعبد وإياك نستعين-->
+        <!--إهدنا الصراط المستقيم-->
+        <!--صراط الذين أنعمت عليهم -->
+        <!--غير المغضوب عليهم-->
+        <!--ولا الضالين آمين-->
+        <!--صدق الله العظيم-->
+        <head>           
+            <title style="@media print{display: none;}"><?php getTitle()?></title>
+            <meta charset="UTF8">            
+            <link rel="stylesheet" href="inc/layout/css/style.css" />
+            <link rel="stylesheet" href="inc/layout/css/normalize.css" />
+            <link rel="stylesheet" href="inc/layout/css/all.min.css" />
+            <link rel="stylesheet" href="inc/layout/css/bootstrap.min.css" />
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        </head>
+    <body class="<?php if(isset($pageTitle) && ($pageTitle==='لوحة الأعدادات' || $pageTitle==='Dashboard')){echo 'body_dashboard';}?>">
